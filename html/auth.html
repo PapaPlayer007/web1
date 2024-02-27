@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <style>
+        /* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.user-auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>User Authentication</h1>
+    </header>
+
+    <div class="user-auth-container">
+        <form id="loginForm" onsubmit="login(event)">
+            <h2>Login</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <form id="signupForm" onsubmit="signup(event)">
+            <h2>Sign Up</h2>
+            <label for="newEmail">Email:</label>
+            <input type="email" id="newEmail" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript code for user authentication
+
+function login(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    // Your login logic here
+    console.log("Login clicked with email:", email, "and password:", password);
+
+    // Check login credentials (example)
+    if (email === "example@example.com" && password === "password") {
+        // Redirect to main page (index.html) after successful login
+        window.location.href = "../index.html";
+    } else {
+        // Show error message (example)
+        var errorMessage = document.createElement("p");
+        errorMessage.textContent = "Invalid email or password.";
+        errorMessage.className = "error-message";
+        var loginForm = document.getElementById("loginForm");
+        loginForm.appendChild(errorMessage);
+    }
+}
+
+    </script>
+</body>
+</html>
