@@ -2,29 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>Universal Appliences And Mattresses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/1.css">
 </head>
 <body>
     <div class="navbarh background">
         <h2>Universal Appliances And Mattresses</h2>
     </div>
-    <nav class="navbar background">
+    <nav class="navbar background" id="Home">
+        <div class="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
         <ul class="nav-List">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#Products">Products</a></li>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="html/products.html">Products</a></li>
             <li><a href="#About">About Us</a></li>
             <li><a href="#Contact">Contact Us</a></li>
         </ul>
+
         <div class="right-nav">
-            <input type="text" name="search" id="search" placeholder="Search">
-            <button class="btn-sm">Search</button>
-            <span id="userStatus">Welcome</span>
-            <a href="html/auth.html" class="btn-sm">Sign In</a>
+            <form class="search-form">
+                <input type="text" name="search" id="search" placeholder="Search">
+                <button class="fas fa-search"></button>
+            </form>
+            <span id="userStatus"></span>
+            <a href="../html/auth.html" class="fas fa-sign-in-alt"></a>
         </div>
     </nav>
-    <section class="products" id="products">
+    <section class="products" id="Products">
         <h2>Best Selling</h2>
         <div class="product-container">
             <div class="product">
@@ -81,13 +91,13 @@
             <h2>About Us</h2>
         </div>
         <div class="contactDetails2">
-            <p><i class="fas fa-envelope"></i>Email: example@example.com</p>
-            <p><i class="fas fa-phone"></i>Phone: +1 (555) 123-4567</p>
-            <p><i class="fas fa-map-marker-alt"></i>Address: example,example,example,12345</p>
+            <p><i class="fas fa-envelope">  example@example.com</i></p>
+            <p><i class="fas fa-phone">  +1 (555) 123-4567</i></p>
+            <p><i class="fas fa-map-marker-alt">  example,example,example,12345</i></p>
         </div>
     </section>
     <footer>
-        <div class="footer-content">
+        <div class="footer-content" id="Contact">
             <div class="quick-links">
                 <h4>Quick Links</h4>
                 <nav>
