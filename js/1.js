@@ -25,8 +25,19 @@ function updateTotal(price) {
     document.getElementById("cartTotal").textContent = newTotal.toFixed(2);
 }
 
-// Function to handle the checkout process
 function checkout() {
-    // Redirect the user to the auth.html page
     window.location.href = "html/payment.html";
 }
+
+function prodPage() {
+    window.location.href = "html/products.html";
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+    });
+});
+
+
+document.getElementById("userStatus").textContent = "Welcome, user!";
