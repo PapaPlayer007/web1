@@ -67,6 +67,7 @@ a[href="../html/auth.html"]:hover {
     font-size: 0.75rem;
     border: 1px solid grey;
     border-radius: 5px;
+    max-width: 90px;
 }
   
 .search-form button {
@@ -124,6 +125,7 @@ a[href="../html/auth.html"]:hover {
     padding: 10px;
     width: 30vh;
     height: 40dvh;
+    bottom: 1%;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -138,7 +140,7 @@ a[href="../html/auth.html"]:hover {
     max-width: 50% ;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 1em;
+    margin-bottom: 5px;
 }
   
 button {
@@ -260,6 +262,7 @@ footer {
   
     .burger.active ~ .nav-List {
       left: 0; 
+      max-width: 22%;
     }
   
     .nav-List li {
@@ -303,7 +306,7 @@ footer {
     }
 
     .burger.active{
-      left: 23%;
+      left: 20%;
     }
 
     .burger.active span:nth-child(1) {
@@ -316,5 +319,10 @@ footer {
   
     .burger.active span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg) ; 
+    }
+
+    .product img {
+        max-width: 45% ;
+        margin-bottom: 2px;
     }
 }
