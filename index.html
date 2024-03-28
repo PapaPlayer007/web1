@@ -1,117 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>Universal Appliences And Mattresses</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fde9eb;
+    /* Light pink background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    /* White content background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    text-align: center;
+    color: #ff6b6b;
+    /* Soft red */
+    animation: scaleUp 1s ease forwards;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.birthday-message {
+    padding: 20px;
+    position: relative;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.birthday-message p {
+    color: #333;
+    /* Dark gray for text */
+    animation: fadeInText 1s ease forwards;
+    font-size: 16px;
+    /* Increase the font size */
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1s ease forwards;
+    position: relative;
+}
+
+footer p {
+    color: pink;
+    border: 2px solid rgb(233, 176, 186);
+    border-radius: 50px;
+}
+
+.top-image,
+.bottom-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    /* Adjust the size of the images */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.top-image {
+    margin-bottom: 20px;
+}
+
+.bottom-image {
+    margin-top: 20px;
+}
+  </style>
 </head>
 <body>
-    <div class="navbarh background">
-        <h2>Universal Appliances And Mattresses</h2>
-    </div>
-    <nav class="navbar background" id="Home">
-        <div class="burger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+  <div class="container">
+    <header>
+      <h1>Happy Birthday, My Love!</h1>
+    </header>
+    <main>
+      <img class="top-image" src="https://www.wishesmsg.com/wp-content/uploads/Happy-Birthday-Wishes-for-Wife.jpg" alt="Happy Birthday Image">
+      <section class="birthday-message">
+        <div class="content">
+          <p>My Dearest Wife,</p>
+          <p>On this special day, I want to take a moment to wish you the happiest birthday ever! You are the light of my life, and every day spent with you is a blessing.</p>
+          <p>May your day be filled with love, laughter, and all the joys your heart desires. You mean everything to me, and I'm grateful for your love, your kindness, and your beautiful spirit.</p>
+          <p>With each passing year, my love for you grows stronger. You inspire me, support me, and make every moment together memorable. Your smile brightens my day, and your presence fills my heart with joy.</p>
+          <p>Thank you for being my partner, my best friend, and my everything. Here's to celebrating you today and always!</p>
+          <p>With all my love,</p>
+          <p>Your Loving Husband.</p>
         </div>
-
-        <ul class="nav-List">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="html/products.html">Products</a></li>
-            <li><a href="#About">About Us</a></li>
-            <li><a href="#Contact">Contact Us</a></li>
-        </ul>
-
-        <div class="right-nav">
-            <form class="search-form">
-                <input type="text" name="search" id="search" placeholder="Search">
-                <button class="fas fa-search"></button>
-            </form>
-            <span id="userStatus"></span>
-            <a href="../html/auth.html" class="fas fa-sign-in-alt"></a>
-        </div>
-    </nav>
-    <section class="products" id="Products">
-        <h2>Best Selling</h2>
-        <div class="product-container">
-            <div class="product">
-                <img src="https://i5.walmartimages.com/asr/4d48ef08-9c9b-4802-a2e0-c55022185398_1.5ecadf3c95d084b3d5793d187d2d05f2.jpeg" alt="product image">
-                <h3>Microwave</h3>
-                <p>$ 99.99</p>
-                <button class="product-btn" onclick="addToCart('Microwave', 99.99)">Add To Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5989/5989902cv12d.jpg" alt="product image">
-                <h3>Dishwasher</h3>
-                <p>$ 99.99</p>
-                <button class="product-btn" onclick="addToCart('Dishwasher', 99.99)">Add To Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://www.curtis-igloo.com/wp-content/uploads/2016/07/FR459.jpg">
-                <h3>Refrigirator</h3>
-                <p>$ 99.99</p>
-                <button class="product-btn" onclick="addToCart('Refrigirator', 99.99)">Add To Cart</button>
-            </div>
-        </div>
-    </section>
-    <section class="products">
-        <h2>New Arrival</h2>
-        <div class="product-container">
-            <div class="product">
-                <img src="https://i5.walmartimages.com/asr/54356505-0edc-47d0-8678-fda966c6ee3c.2839f1ab8987146a22df07a1316bc3d2.jpeg" alt="product image">
-                <h3>Mattresses</h3>
-                <p>$ 99.99</p>
-                <button class="product-btn" onclick="addToCart('Mattresses', 99.99)">Add To Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://contents.mediadecathlon.com/p1592998/k$c901b69179d40a0c2d013d8880a994f7/sq/Beginner-Boxing-Gloves-100-Red.jpg" alt="product image">
-                <h3>Boxing Gloves</h3>
-                <p>$ 99.99</p>
-                <button class="product-btn" onclick="addToCart('Boxing Gloves', 99.99)">Add To Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://premierappliancestore.com/image/cache/data/swashergray1-800x800.jpg" alt="product image">
-                <h3>Washer And Dryer</h3>
-                <p>$ 99.99</p>
-                <button class="product-btn" onclick="addToCart('Washer And Dryer', 99.99)">Add To Cart</button>
-            </div>
-        </div>
-    </section>
-    <div class="cart-container">
-        <h2>Shopping Cart</h2>
-        <ul id="cartItems"></ul>
-        <p>Total: $<span id="cartTotal">0.00</span></p>
-        <button onclick="checkout()">Checkout</button>
-    </div>
-    <section id="About">
-        <div class="contactDetails1">
-            <h2>About Us</h2>
-        </div>
-        <div class="contactDetails2">
-            <p><i class="fas fa-envelope">  example@example.com</i></p>
-            <p><i class="fas fa-phone">  +1 (555) 123-4567</i></p>
-            <p><i class="fas fa-map-marker-alt">  example,example,example,12345</i></p>
-        </div>
-    </section>
+      </section>
+      <img class="bottom-image" src="https://www.wishesmsg.com/wp-content/uploads/wife-birthday-wishes.jpg" alt="Happy Birthday Image">
+    </main>
     <footer>
-        <div class="footer-content" id="Contact">
-            <div class="quick-links">
-                <h4>Quick Links</h4>
-                <nav>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                </nav>
-            </div>
-            <div class="social-media">
-                <h4>Follow Us</h4>
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-            </div>
-        </div>
+      <p>Created with love by someone for their special one.</p>
     </footer>
-    <script src="js/1.js"></script>
+  </div>
 </body>
 </html>
